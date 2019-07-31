@@ -1,0 +1,29 @@
+@function sq($r) {
+  $x0: 1;
+  $x1: $x0;
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+  @return $x1;
+}
+
+@mixin triangle($width) {
+  content: "";
+  width: #{round($width/sq(2) * 10) / 10}px;
+  height: #{round($width/sq(2) * 10) / 10}px;
+  display: inline-block;
+  benefits-align: middle;
+  line-height: 0;
+  border: 1px solid currentColor;
+  border-left: none;
+  border-top: none;
+  transform: rotate(45deg);
+}
+@mixin triangle-full($height, $width: $height) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: #{$height / 2}px 0 #{$height / 2}px #{$width}px;
+  border-color: transparent transparent transparent $gray;
+}

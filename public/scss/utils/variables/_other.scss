@@ -1,0 +1,14 @@
+$wrapper-indent: 32px;
+$wrapper: 1140px + $wrapper-indent * 2;
+$img-path: '../../img/';
+$sidebar-width: 248px;
+$transition: .2s all ease-in-out;
+$link-transition: .2s color;
+$shadow-transition: box-shadow 0.2s ease-in-out;
+$transform-transition: 0.1s transform linear;
+$transform-transition-hover: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$opacity-transition: 0.1s opacity ease-in-out;
+$btn-gradient: linear-gradient(166.35deg, $orange 9.13%, $dark-orange 132.87%) ;
+$btn-gradient-hovered: linear-gradient(176.32deg, $dark-orange 9.13%, #C33E1C 132.87%) ;
+$box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+$box-shadow-hovered: 0 10px 70px rgba(0,0,0,.107);

@@ -1,0 +1,38 @@
+.todo-list__list {
+  display: flex;
+
+  li {
+    margin-right: 20px;
+  }
+
+  button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.todo-list__dropdown-header {
+
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.todo-list__toggl-icon {
+
+  transform: rotate(270deg);
+  margin-right: 5px;
+}
+
+
+
+input {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
+}

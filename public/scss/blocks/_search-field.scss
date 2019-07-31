@@ -1,0 +1,27 @@
+.search-field {
+  margin-top: 58px;
+  margin-bottom: 22px;
+
+  a {
+    position: absolute;
+    z-index: 5;
+    right: 253px;
+    bottom: 63px;
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+.search-field__input {
+  width: 630px;
+  height: 48px;
+  overflow: hidden;
+  border: none;
+  margin-top: 22px;
+  border-radius: 30px;
+  position: relative;
+  padding: 17px 29px 15px 29px;
+}
+

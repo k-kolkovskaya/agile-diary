@@ -1,0 +1,14 @@
+button.icon {
+    background-color: transparent;
+    border: none;
+    height: 24px;
+
+    i {
+        color: transparentize($pink, .75);
+        cursor: pointer;
+
+        &:hover {
+            color: transparentize($pink, 0);
+        }
+    }
+}

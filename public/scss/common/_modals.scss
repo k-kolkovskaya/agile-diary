@@ -1,0 +1,135 @@
+body._has-modal {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.modals-wrapper {
+  @extend .modal__wrapper;
+}
+
+.modal-popup {
+  &._inner-scroll {
+    overflow-y: visible;
+    .ie10 &, .ie9 & {
+      overflow-y: auto;
+      .modal-inner-wrap {
+        max-height: none;
+      }
+    }
+    .modal-inner-wrap {
+      //max-height: 90%;
+      max-height: 90vh;
+    }
+    .modal-content {
+      overflow-y: auto;
+      form {
+        //@include form-block-extend;
+        padding: 0 !important;
+      }
+    }
+  }
+  .modal-inner-wrap {
+    @extend .modal__popup-inner;
+  }
+  .modal-header {
+    @extend .modal__header;
+    .action-close {
+      @extend .modal__btn-close;
+    }
+  }
+  .modal-footer {
+    @extend .modal__footer;
+    button {
+      //@extend .btn;
+      float: right;
+      margin-left: 12px;
+    }
+  }
+  .modal-footer-actions {
+    @extend .modal__footer;
+  }
+}
+.modal-slide, .modal-popup {
+  @extend .modal__popup;
+}
+.modals-overlay {
+  @extend .modal__overlay;
+}
+
+.modal__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $white;
+  padding: 15px 15px 24px;
+}
+.modal__header {
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $white;
+  padding: 24px 15px 15px;
+}
+.modal__overlay {
+  background-color: transparentize($black, .29);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.modal__popup {
+  min-width: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: auto;
+  visibility: hidden;
+  &._show {
+    visibility: visible;
+    .modal-inner-wrap {
+      transform: translateY(50%);
+      opacity: 1;
+    }
+  }
+}
+.modal__popup-inner {
+  margin: auto;
+  max-width: 67.018%;
+  width: 752px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(-200%);
+  transition: .2s transform, opacity ease;
+  background-color: $light-gray;
+  //box-shadow: 0 25px 50px 0 $color-main;
+  border-radius: 6px;
+  padding: 115px 125px;
+  opacity: 0;
+  overflow: hidden;
+}
+.modal__wrapper {
+  ._has-modal & {
+    position: relative;
+    z-index: 200;
+  }
+}
+.modal__btn-close {
+  display: none;
+  @extend %close;
+}

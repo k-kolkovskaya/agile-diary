@@ -1,0 +1,119 @@
+.block-container,
+.block-container_gray,
+.block-container_gray_right,
+.block-container_black{
+  padding: 110px 0 80px 0;
+}
+
+.block-container__inner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.block-container_gray,
+.block-container_gray_right{
+  background-color: $light-gray;
+  background-image: url("../../img/section/_section_bg.png");
+  background-repeat: no-repeat;
+  background-size: unset;
+  background-position: -10%;
+}
+
+.block-container_black {
+  background-color: $dark-grey;
+}
+
+.block-container_black.contact {
+  background-image: url("../../img/section/_black_bg.png");
+}
+
+.block-container_gray.standard {
+  background-image: none;
+}
+
+.block-container_black_photo {
+  @extend .block-container_black;
+  background-image: url("../../img/services/dedicated_person.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.block-container_gray_right {
+  background-image: url("../../img/section/_section_bg_right.png");
+  background-position: 100%;
+}
+
+.block-container__2-item,
+.block-container__3-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $box-shadow;
+
+  @include desktop {
+    width: 48%;
+    margin-bottom: 35px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 18px;
+
+    @include desktop {
+      margin-bottom: 35px;
+    }
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.block-container__3-item {
+
+  @include desktop {
+    width: 30%;
+  }
+}
+
+.block-container__link-wrapper {
+
+  max-width: 240px;
+
+  @include tablet {
+    max-width: none;
+  }
+}
+
+.section-with-btn {
+  .btn {
+    margin-top: 47px;
+  }
+}
+
+.sidebar_left {
+  width: 45%;
+
+  .block-title_white {
+    text-align: left;
+  }
+}

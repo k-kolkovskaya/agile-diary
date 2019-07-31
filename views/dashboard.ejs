@@ -1,0 +1,132 @@
+<% include ./partials/header %>
+<div class="page-wrapper main">
+            <aside class="todo-list">
+              <div class="todo-list__content">
+                <ul class="todo-list__list">
+                  <li class="todo-list__dropdown-header">
+                    <div class="todo-list__toggl-icon">
+                      <svg width="16px" height="16px" viewBox="0 0 16 16">
+                        <g transform="translate(-266, -17)" fill="#777777">
+                          <path
+                            d="M280,22.7581818 L279.1564,22 L273.9922,26.506 L273.4414,26.0254545 L273.4444,26.0281818 L268.8562,22.0245455 L268,22.7712727 C269.2678,23.878 272.8084,26.9674545 273.9922,28 C274.8718,27.2330909 274.0144,27.9809091 280,22.7581818"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <h3>Sprints</h3>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+            <!--SPRINT CONTAINER STARTS-->
+            <section class="content sprint">
+              <!--AIM CONTAINER STARTS-->
+              <div class="sprint__block aim">
+                <p class="block-text">
+                  <strong>Choose your three aims to nearest 9 weeks,</strong>
+                  one in each cathegory: personal development (physical,
+                  intellectual, emotional), career, relationships (friends and
+                  family). Divide aims into stages and specify in which weeks
+                  you're planning to realize them.
+                </p>
+                <!--AIM ITEM STARTS-->
+                <div class="aim__item">
+                  <label for="aim__first">
+                    <h1>AIM № 1:</h1>
+                    <h2>(personal development)</h2>
+                  </label>
+                  <input
+                    type="text"
+                    id="aim__first"
+                    placeholder="Add your aim here"
+                  />
+                  <button class="save icon" icon="save" type="submit">
+                    <i class="material-icons">save</i>
+                  </button>
+                  <table class="aim__table">
+                    <thead class="aim__thead">
+                      <th>Stages</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                      <th>5</th>
+                      <th>6</th>
+                      <th>7</th>
+                      <th>8</th>
+                      <th>9</th>
+                    </thead>
+                    <tbody class="aim__tbody"></tbody>
+                  </table>
+                </div>
+                <!--AIM ITEM ENDS-->
+                <!--AIM ITEM STARTS-->
+                <div class="aim__item">
+                  <label for="aim__second">
+                    <h1>AIM № 2:</h1>
+                    <h2>(career)</h2>
+                  </label>
+                  <input
+                    type="text"
+                    id="aim__second"
+                    placeholder="Add your aim here"
+                  />
+                  <button class="save icon" icon="save" type="submit">
+                    <i class="material-icons">save</i>
+                  </button>
+                  <table class="aim__table">
+                    <thead class="aim__thead">
+                      <th>Stages</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                      <th>5</th>
+                      <th>6</th>
+                      <th>7</th>
+                      <th>8</th>
+                      <th>9</th>
+                    </thead>
+                    <tbody class="aim__tbody"></tbody>
+                  </table>
+                </div>
+                <!--AIM ITEM ENDS-->
+                <!--AIM ITEM STARTS-->
+                <div class="aim__item">
+                  <label for="aim__third">
+                    <h1>AIM № 3:</h1>
+                    <h2>(relationships)</h2>
+                  </label>
+                  <input
+                    type="text"
+                    id="aim__third"
+                    placeholder="Add your aim here"
+                  />
+                  <button class="save icon" icon="save" type="submit">
+                    <i class="material-icons">save</i>
+                  </button>
+                  <table class="aim__table">
+                    <thead class="aim__thead">
+                      <th>Stages</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                      <th>5</th>
+                      <th>6</th>
+                      <th>7</th>
+                      <th>8</th>
+                      <th>9</th>
+                    </thead>
+                    <tbody class="aim__tbody"></tbody>
+                  </table>
+                </div>
+                <!--AIM ITEM ENDS-->
+              </div>
+              <!--AIM CONTAINER ENDS-->
+              <div class="sprint__block habbits"></div>
+              <div class="sprint__block rituals"></div>
+              <div class="sprint__block week-shedule"></div>
+            </section>
+            <!--SPRINT CONTAINER ENDS-->
+          </div>

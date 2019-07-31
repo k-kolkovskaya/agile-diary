@@ -1,0 +1,20 @@
+.block-subtitle,
+.block-subtitle_white {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: $font-header;
+  text-align: left;
+  line-height: normal;
+  color: $gray;
+  margin-bottom: 10px;
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 18px;
+  }
+}
+
+.block-subtitle_white {
+  color: $white;
+}

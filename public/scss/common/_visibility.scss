@@ -1,0 +1,59 @@
+br {
+  &.xs, &.md {
+
+  }
+  &.md {
+
+  }
+  &.xs {
+
+  }
+  &.lg {
+
+  }
+  &.lg-md {
+
+  }
+  &.lg-md-xs {
+
+  }
+  &.visible {
+
+  }
+}
+
+.hidden, .hide {
+  display: none;
+}
+
+.visible-lg {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
+.visible-md {
+  display: block;
+  @include desktop {
+    display: none;
+  }
+}
+.hidden-md {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+.visible-xs {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
+.hidden-xs {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}

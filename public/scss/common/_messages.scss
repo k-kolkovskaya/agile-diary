@@ -1,0 +1,37 @@
+%message {
+  margin: 12px 0;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 6px;
+  font-weight: 300;
+  display: block;
+  background-color: transparentize($green, .85);
+  color: darken($green, 15%);
+  &.error {
+    background-color: transparentize($red, .75);
+    color: darken($red, 15%);
+  }
+  &.notice {
+    background-color: transparentize($yellow, .75);
+    color: darken($yellow, 15%);
+  }
+}
+
+.page.messages {
+  .messages {
+
+  }
+  .message {
+    @extend %message;
+  }
+}
+.catalogsearch-result-index {
+  .column.main {
+    .message {
+      @extend %message;
+      &.notice {
+        margin-left: -228px;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.welcome {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    height: 100vh;
+}
+
+.welcome__inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 20px;
+    box-shadow: $box-shadow;
+    background-color: darken($dark-grey, 5%);
+    text-align: center;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+.welcome__form-group {
+    margin-bottom: 30px;
+
+    label {
+        text-align: left;
+    }
+}

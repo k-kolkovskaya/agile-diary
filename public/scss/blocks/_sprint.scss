@@ -1,0 +1,8 @@
+.sprint__block {
+    background-color: darken($dark-grey, 5%);
+    padding: 40px;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}

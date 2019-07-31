@@ -1,0 +1,30 @@
+.block-text,
+.block-text_white {
+  font-size: 12px;
+  max-width: 970px;
+  margin-bottom: 30px;
+
+  &_centred {
+    text-align: center;
+    font-size: 18px;
+    max-width: 100%;
+  }
+}
+
+.block-text {
+
+  strong {
+    color: $pink;
+  }
+}
+
+.block-text_white,
+.block-text_white_centred,
+.white {
+
+  color: $white;
+}
+
+a.white:hover {
+  color: $border-color;
+}

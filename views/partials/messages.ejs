@@ -1,0 +1,31 @@
+<% if (typeof errors !== 'undefined') { %>
+    <% errors.forEach(function(error) { %>
+    <div class ="msg__error">
+        <%= error.msg %>
+        <i class="material-icons">close</i>
+    </div>
+   <% }); %>
+<% }; %>
+
+<% if (success_msg != '') { %>
+    <div class ="msg__success">
+        <%= success_msg %>
+        <i class="material-icons" class='icon_close'>close</i>
+    </div>
+<% }; %>
+
+<% if (error_msg != '') { %>
+    <div class ="msg__warning">
+        <%= error_msg %>
+        <i class="material-icons" class='icon_close'>close</i>
+    </div>
+<% }; %>
+
+<% if (error != '') { %>
+    <div class ="msg__warning">
+        <%= error %>
+        <i class="material-icons" class='icon_close'>close</i>
+    </div>
+<% }; %>
+
+

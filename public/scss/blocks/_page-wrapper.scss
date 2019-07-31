@@ -1,0 +1,56 @@
+.page-wrapper {
+  @extend %page-wrapper;
+}
+
+.page-wrapper.main {
+  @extend %page-wrapper;
+
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: repeat(auto-fill, 1fr) 80px;
+}
+
+.page-container {
+  overflow: hidden;
+}
+
+.page-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns {
+  .page-layout-2columns-left & {
+    @include clearfix;
+
+    >.column.main {
+      @include desktop {
+        float: right;
+        width: calc(100% - #{$sidebar-width});
+
+        &.full {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        &.filters-hidden {
+          width: 100%;
+
+          ~.sidebar {
+            display: none;
+          }
+        }
+      }
+    }
+
+    >.sidebar {
+      @include desktop {
+        float: left;
+        width: $sidebar-width;
+        padding-right: 24px;
+        margin-top: 64px;
+      }
+    }
+  }
+}
