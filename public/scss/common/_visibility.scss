@@ -23,7 +23,7 @@ br {
 }
 
 .hidden, .hide {
-  display: none;
+  display: none !important;
 }
 
 .visible-lg {

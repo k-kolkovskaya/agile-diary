@@ -667,7 +667,7 @@ button.btn {
   color: #89DDFF; }
 
 .hidden, .hide {
-  display: none; }
+  display: none !important; }
 
 .visible-lg {
   display: none; }
