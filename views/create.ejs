@@ -1,0 +1,15 @@
+<% include ./partials/header %>
+<div class="page-wrapper">
+    <section class="content create">
+        <form action="/api/create" method="POST">
+            <h2>Create todo</h2>
+            <% include ./partials/messages %>
+            <div class="input-field">
+                <input type="text" name="title" placeholder="Todo title">
+            </div>
+            <button type="submit" class="btn btn_orange"><span>Create</span></button>
+        </form>
+    </section>
+</div>
+
+

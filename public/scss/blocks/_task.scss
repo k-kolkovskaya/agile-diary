@@ -1,0 +1,21 @@
+.task {
+  padding: 20px;
+  border-bottom: 1px solid $dark-grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:first-child {
+    border-top: 1px solid $dark-grey;
+  }
+
+  p.completed {
+    text-decoration: line-through;
+    color: darken(white, 10%);
+  }
+}
+
+.task__inner {
+  display: flex;
+  align-items: center;
+}

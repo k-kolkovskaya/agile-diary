@@ -1594,6 +1594,62 @@ table.aim__table tbody td {
   border: 1px solid #c3e69f;
   color: #A9DC76; }
 
+.task {
+  padding: 20px;
+  border-bottom: 1px solid #2C2C2C;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .task:first-child {
+    border-top: 1px solid #2C2C2C; }
+  .task p.completed {
+    text-decoration: line-through;
+    color: #e6e6e6; }
+
+.task__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.create {
+  width: 300px;
+  margin: auto; }
+  .create form {
+    height: 150px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .create input {
+    width: 300px; }
+
 .hp-intro-section {
   overflow: hidden;
   position: relative; }

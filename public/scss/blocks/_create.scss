@@ -1,0 +1,16 @@
+.create {
+  width: 300px;
+  margin: auto;
+
+  form {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  input {
+    width: 300px;
+  }
+}
