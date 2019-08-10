@@ -3,19 +3,27 @@
   <% include ./partials/aside.ejs %>
   <section class="content sprint">
     <div class="sprint__block day">
+    <p class="block-text">
+                  <strong>Choose your three aims to nearest 9 weeks,</strong>
+                  one in each cathegory: personal development (physical,
+                  intellectual, emotional), career, relationships (friends and
+                  family). Divide aims into stages and specify in which weeks
+                  you're planning to realize them.
+                </p>
       <% if (tasks.length) {%>
                 <% tasks.forEach(function(task) { %>
-                <div class="day task">
+                <div class="day task" data-id=<%- task._id %> >
+                <% include ./partials/messages.ejs %>
                     <% if (task.isCompleted) {%>
                     <div class="task__inner">
-                      <button class="save icon" icon="save" type="button">
+                      <button class="complete icon" type="button">
                           <i class="material-icons">
                               radio_button_checked
                           </i>
                       </button>
-                        <p class="completed"><%-task.title%></p>
+                        <p class="completed task__title"><%-task.title%></p>
                     </div>
-                    <div class="task__buttons">
+                    <div class="task__buttons" >
                       <button class="delete icon" icon="delete" type="button">
                           <i class="material-icons">delete</i>
                       </button>
@@ -25,13 +33,12 @@
                     </div>
                     <% } else {%>
                     <div class="task__inner">
-                        <% include ./partials/messages %>
-                      <button class="save icon" icon="save" type="button">
+                      <button class="complete icon" type="button">
                           <i class="material-icons">
                               radio_button_unchecked
                           </i>
                         </button>
-                        <p><%-task.title%></p>
+                        <p class="task__title"><%-task.title%></p>
                     </div>
                     <div class="task__buttons">
                       <button class="delete icon" icon="delete" type="button">
@@ -42,7 +49,34 @@
                       </button>
                     </div>
                     <% } %>
-                    <input type="hidden" value=<%- task._id %> name="id">
+                    <input type="hidden" value=<%- task._id %> name="id" class="task-id">
+                    <div class="accordion">
+                        <div class="accordion__sidebar">
+                            <div class="accordion__item" data-mode="accordion">
+                                <div class="accordion__title">
+                                    <h4>View stages</h4>
+                                </div>
+                                <div class="accordion__inner">
+                                    <table class="aim__table">
+                                        <thead class="aim__thead">
+                                        <th>Stages</th>
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+                                        <th>5</th>
+                                        <th>6</th>
+                                        <th>7</th>
+                                        <th>8</th>
+                                        <th>9</th>
+                                        </thead>
+                                        <tbody class="aim__tbody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <% }); %>
       <% } else {%>

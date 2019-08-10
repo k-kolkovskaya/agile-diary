@@ -1,35 +1,37 @@
 .accordion {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
+}
+
+.accordion__sidebar {
+  width: 100%;
 }
 
 .accordion__item {
 
-  width: 540px;
-  padding: 21px 40px;
-  border-top: 1px solid $borders-gray;
+  width: 100%;
+  padding: 10px 20px;
   position: relative;
   cursor: pointer;
-
-  &:last-child {
-    border-bottom: 1px solid $borders-gray;
-  }
+  grid-column-start: 1;
+  grid-column-end: 3;
 
   &::before {
     content: "";
     height: 28px;
     width: 17px;
-    top: 27px;
-    right: 0;
+    right: -30px;
     position: absolute;
-    background-image: url("../../img/icons/arrow_right.svg");
+    background-image: url("../../img/arrow_right.png");
+    background-size: 40%;
     background-repeat: no-repeat;
   }
 
   &::after {
     content: "";
     height: 0;
-    width: 6px;
+    width: 1px;
     top: 0;
     left: 0;
     position: absolute;
@@ -39,7 +41,11 @@
   h4 {
     font-family: $pt-header;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
+
+    &:hover {
+      color: $yellow;
+    }
   }
 
   .accordion__inner {
@@ -61,7 +67,6 @@
 
   &.active {
 
-    padding: 24px 40px;
     transition: $transition;
 
     &::after {
@@ -70,8 +75,9 @@
     }
 
     &::before {
-      background-image: url("../../img/icons/arrow_down.svg");
+      background-image: url("../../img/arrow_down.svg");
       width: 30px;
+      right: -40px;
     }
 
     h4 {
@@ -81,15 +87,6 @@
     .accordion__inner {
       display: block;
     }
-  }
-}
-
-.accordion__inner {
-
-  width: 315px;
-
-  p, li {
-    margin-bottom: 10px;
   }
 }
 

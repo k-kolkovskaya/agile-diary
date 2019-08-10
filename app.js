@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser());
 
 //Passport config
 require("./config/passport")(passport);
@@ -21,7 +21,9 @@ const db = require("./config/keys").MongoURI;
 
 //Connect to Mongo
 mongoose
-  .connect(db, { useNewUrlParser: true })
+  .connect(db, {
+    useNewUrlParser: true
+  })
   .then(() => console.log("Mongo DB connected"))
   .catch(err => console.log(err));
 

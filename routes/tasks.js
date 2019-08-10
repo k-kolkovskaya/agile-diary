@@ -14,7 +14,7 @@ router.post("/create", async (req, res) => {
   const title = req.body.title;
   let errors = [];
 
-  if(!title) {
+  if (!title) {
     errors.push({
       msg: "You need to fill your task"
     })
@@ -36,15 +36,9 @@ router.post("/create", async (req, res) => {
   }
 });
 
-router.get("/complete", async (req, res) => {
-  const tasks = await Task.find({
-    user: req.user.id
-  });
-  res.send(tasks);
-});
-
-router.post("/complete", async (req, res) => {
+router.post("/complete", ensureAuthenticated, async (req, res) => {
   try {
+    console.log(req.body);
     const task = await Task.findById(req.body.id);
     task.isCompleted ? task.isCompleted = false : task.isCompleted = true;
     await task.save();
@@ -53,7 +47,45 @@ router.post("/complete", async (req, res) => {
   }
 
   res.redirect("/dashboard");
-  req.flash("success_msg", "Your task have been added");
+});
+
+router.delete("/delete", ensureAuthenticated, async (req, res) => {
+  try {
+    console.log(req.body);
+    const task = await Task.findById(req.body.id);
+    await task.delete();
+  } catch (err) {
+    console.log(err);
+  }
+
+  res.send("/dashboard");
+});
+
+router.post("/update", ensureAuthenticated, async (req, res) => {
+  try {
+    const value = req.body.value;
+    let errors = [];
+
+  if (!value) {
+    errors.push({
+      msg: "You need to fill your task"
+    })
+  }
+
+  if (errors.length > 0) {
+    res.render("update", {
+      errors,
+      value
+    });
+  } else {
+    const task = await Task.findById(req.body.id);
+    task.title = value;
+    await task.save();
+  }} catch (err) {
+    console.log(err);
+  }
+
+  res.send("/dashboard");
 });
 
 module.exports = router;

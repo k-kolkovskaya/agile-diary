@@ -1,7 +1,9 @@
 .task {
   padding: 20px;
   border-bottom: 1px solid $dark-grey;
-  display: flex;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: repeat(auto-fill, 1fr) 80px;
   align-items: center;
   justify-content: space-between;
 
@@ -18,4 +20,9 @@
 .task__inner {
   display: flex;
   align-items: center;
+  width: 90%;
+}
+
+#task__update {
+  width: 100%;
 }
