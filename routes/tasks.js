@@ -42,11 +42,10 @@ router.post("/complete", ensureAuthenticated, async (req, res) => {
     const task = await Task.findById(req.body.id);
     task.isCompleted ? task.isCompleted = false : task.isCompleted = true;
     await task.save();
+    res.redirect("/dashboard");
   } catch (err) {
     console.log(err);
   }
-
-  res.redirect("/dashboard");
 });
 
 router.delete("/delete", ensureAuthenticated, async (req, res) => {
@@ -54,11 +53,12 @@ router.delete("/delete", ensureAuthenticated, async (req, res) => {
     console.log(req.body);
     const task = await Task.findById(req.body.id);
     await task.delete();
+    res.redirect("/dashboard");
   } catch (err) {
     console.log(err);
   }
 
-  res.send("/dashboard");
+
 });
 
 router.post("/update", ensureAuthenticated, async (req, res) => {
@@ -81,11 +81,10 @@ router.post("/update", ensureAuthenticated, async (req, res) => {
     const task = await Task.findById(req.body.id);
     task.title = value;
     await task.save();
+    res.redirect('/dashboard');
   }} catch (err) {
     console.log(err);
   }
-
-  res.send("/dashboard");
 });
 
 module.exports = router;
